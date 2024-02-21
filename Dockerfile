@@ -1,9 +1,9 @@
 FROM python:alpine
-ADD . /app
-WORKDIR /app
+ADD . /appfile
+WORKDIR /appfile
 COPY requirement.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirement.txt
 COPY . .
-EXPOSE 5001
+EXPOSE 5005
 CMD ["python", "main.py"]
